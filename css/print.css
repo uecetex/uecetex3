@@ -1,0 +1,16 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+@page {
+    size: A4;
+    margin-top: 3cm;
+    margin-left: 3cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
+}
+
+#output {
+    border: none !important;
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+        <meta name="description" content="An online version of weight vectors generator for MOEA/D and NSGA-III metaheuristics">
+	  	<meta name="author" content="Thiago Nascimento">
+		<meta name="keywords" content="weight vectors generator, nsga-III, moea/d">
+        <meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Weight Vectors">
+		<meta name="robots" content="index, follow">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#f8f8f8">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#f8f8f8">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/uecetex3.css">
+
+        <title>UeceTeX</title>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="custom-bootstrap-menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Weight Vectors Generator</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+        			<ul class="nav navbar-nav">
+        				<li><a href="https://github.com/thiagodnf/weight-vectors-generator" target="_blank">Source Code</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--<input type="button" onclick="printDiv('output')" value="print a div!" />-->
+
+
+<!--
+        <page size="A4" id="teset">
+
+        <div id="output">
+            <h1 id="chapter1">EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA</h1>
+
+            <h2>CONTEXTUALIZANDO A EDUCAÇÃO</h2>
+
+            <p>Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005)</p>
+
+            <h3>Educação de jovens e adultos</h3>
+
+            <p>A educação de jovens e adultos (EJA) é a modalidade de ensino nas etapas dos ensinos fundamental e médio da rede escolar pública brasileira e adotada por algumas redes particulares que recebe os jovens e adultos que não completaram os anos da educação básica em idade apropriada por qualquer motivo.</p>
+
+            <h4>A visão do educador de jovens e adultos </h4>
+
+            <p>
+                A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+            </p>
+
+            <p class="indent">
+                A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+            </p>
+
+
+            <h2>seções secundárias (cx. alta sem negrito) </h2>
+
+            <p class="indent">
+                A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+            </p>
+
+            <p class="indent">APOS o levantamento do material bibliográfico, os procedimentos de coleta e TRATAMENTO dos dados foram os seguintes:</p>
+            <p class="indent">APOS o levantamento do material bibliográfico, os procedimentos de coleta e TRATAMENTO dos dados foram os seguintes:</p>
+            <p>Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste</p>
+
+            <ul class="alinea">
+                <li>Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;</li>
+                <li>leitura analítica, com o intuito de ordenar e sumariar as informações contidas nas fontes – leitura de natureza crítica. Este tipo de leitura passou pelos seguintes momentos:
+                <ul class="subalinea">
+                    <li>leitura integral do texto para se ter uma visão do todo;</li>
+                    <li>identificação das ideias chaves (análise temática);</li>
+                    <li>hierarquização das ideias e sua organização, seguindo uma ordem de importância para a pesquisa.</li>
+                </ul>
+                </li>
+                <li>leitura interpretativa, que foi a última etapa do processo e teve por objetivo relacionar o que o autor afirmou com o problema de pesquisa.</li>
+            </ul>
+
+            <h1 id="chapter2">EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA</h1>
+
+            <h2>seções secundárias (cx. alta sem negrito) </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+
+            <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
+            <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+        -->
+
+        </div>
+        </page>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
+                    <input type="button" id="print" value="View" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6">
+                    <textarea id="input" class="form-control" rows="10">
+# EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA
+
+!figure[Thidosdfodf][images/teste.png][Elabora do pelo]
+!figure[Thidosdfodf][images/teste.png][Elabora do pelo]
+
+Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005)</p>
+Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005)</p>
+
+## EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA
+
+<ul>
+    <li>tse</li>
+</ul>
+
+Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005)</p>
+
+### Educação de jovens e adultos
+
+| h1    |    h2   |      h3 |
+|:------|:-------:|--------:|
+| 100   | [a][1]  | ![b][2] |
+| *foo* | **bar** | ~~baz~~ |
+
+#### A visão do educador de jovens e adultos
+
+@glyphicon-teste
+
+![](images/teste.png)
+
+
+
+##### Seções quinarias (cx. alta e baixa com itálico)
+
+Vestibulum ac felis est. Suspendisse nec ipsum diam. Sed rutrum justo ut aliquet venenatis. Etiam ultrices felis quis felis aliquam, sed tincidunt sapien dapibus. Proin vehicula feugiat justo, vel tristique purus pretium ut. Curabitur eu consectetur arcu, quis pulvinar sapien. Pellentesque a dui bibendum, congue mi sit amet, mollis libero. Donec gravida tortor sit amet urna varius, et sollicitudin mi faucibus. Phasellus elementum semper dictum. Fusce vel suscipit risus. Maecenas efficitur eget lacus condimentum finibus. Duis sem elit, porttitor vel finibus ac, convallis at urna
+
+- Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;
+    - Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;
+    - Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;
+- leitura analítica, com o intuito de ordenar e sumariar as informações contidas nas fontes – leitura de natureza crítica. Este tipo de leitura passou pelos seguintes momentos:
+
+markdown
+
+                    </textarea>
+                </div>
+                <div class="col-xs-6">
+                    <div id="output">
+                    <!--
+                        <h1 id="chapter1">EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA</h1>
+
+                        <h2>CONTEXTUALIZANDO A EDUCAÇÃO</h2>
+
+                        <p>Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005)</p>
+
+                        <h3>Educação de jovens e adultos</h3>
+
+                        <p>A educação de jovens e adultos (EJA) é a modalidade de ensino nas etapas dos ensinos fundamental e médio da rede escolar pública brasileira e adotada por algumas redes particulares que recebe os jovens e adultos que não completaram os anos da educação básica em idade apropriada por qualquer motivo.</p>
+
+                        <h4>A visão do educador de jovens e adultos </h4>
+
+                        <p>
+                            A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+                        </p>
+
+                        <p class="indent">
+                            A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+                        </p>
+
+
+                        <h2>seções secundárias (cx. alta sem negrito) </h2>
+
+                        <p class="indent">
+                            A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+                        </p>
+
+                        <p class="indent">APOS o levantamento do material bibliográfico, os procedimentos de coleta e TRATAMENTO dos dados foram os seguintes:</p>
+
+                        <ul class="alinea">
+                            <li>Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;</li>
+                            <li>leitura analítica, com o intuito de ordenar e sumariar as informações contidas nas fontes – leitura de natureza crítica. Este tipo de leitura passou pelos seguintes momentos:
+                            <ul class="subalinea">
+                                <li>leitura integral do texto para se ter uma visão do todo;</li>
+                                <li>identificação das ideias chaves (análise temática);</li>
+                                <li>hierarquização das ideias e sua organização, seguindo uma ordem de importância para a pesquisa.</li>
+                            </ul>
+                            </li>
+                            <li>leitura interpretativa, que foi a última etapa do processo e teve por objetivo relacionar o que o autor afirmou com o problema de pesquisa.</li>
+                        </ul>
+
+                        <h1 id="chapter2">EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA</h1>
+
+                        <h2>seções secundárias (cx. alta sem negrito) </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+
+                        <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
+                        <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+
+                        <h4>Seções quaternárias (cx. alta e baixa sem negrito) </h4>
+                        <h4>Seções quaternárias (cx. alta e baixa sem negrito) </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+
+                        <h5>Seções quinarias (cx. alta e baixa com itálico)</h5>
+                        <h5>Seções quinarias (cx. alta e baixa com itálico)</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
+
+                        <p>Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:</p>
+
+                        <div class="citacao-longa">
+                            A aquisição do sistema escrito é um processo histórico, tanto a nível onto-genético, como a nível filogenético. O sistema escrito é produzido historicamente pela humanidade e utilizado de acordo com interesses políticos de classe. O sistema escrito não é um valor neutro
+                        </div>
+
+                        <p>Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:</p>
+
+                        <div class="citacao-longa">
+                            A aquisição do sistema escrito é um processo histórico, tanto a nível onto-genético, como a nível filogenético. O sistema escrito é produzido historicamente pela humanidade e utilizado de acordo com interesses políticos de classe. O sistema escrito não é um valor neutro
+                        </div>
+
+                        <h5>Seções quinarias (cx. alta e baixa com itálico)</h5>
+
+                        <p>Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:</p>
+
+                        <div class="floating">
+                            <p class="caption">Figura 1 - Produção anual das dissertações de mestrado e teses de doutorado entre os anos de 1990 e 2008</p>
+                            <center>
+                            <div class="figure">
+                                <img width="370px" src="images/teste.png" />
+                                <p class="font">Fonte: Elaborado pelo autor.<p>
+                                <p class="note">Nota: Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:<p>
+                            </div>
+                            </center>
+                        </div>
+
+                        <p>Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:</p>
+
+
+                        <h5>Seções quinarias (cx. alta e baixa com itálico)</h5>
+
+                        <div class="floating">
+                            <p class="caption">Figura 2 - Produção anual das dissertações de mestrado e teses de doutorado entre os anos de 1990 e 2008</p>
+                            <center>
+                            <div class="table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Well #</th>
+                                            <th>Velocity: BD tests</th>
+                                            <th>Hydraulic</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>b2</td>
+                                            <td>0.054 ft/d</td>
+                                            <td>1.1 x 10-2 ft/d</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B3</td>
+                                            <td>0.32 ft/d</td>
+                                            <td>0.07 ft/d</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B4</td>
+                                            <td>0.06 ft/d</td>
+                                            <td>1.2 x 10-2 ft/d</td>
+                                        </tr>
+                                    <tbody>
+                                </table>
+                                <p class="font">Fonte: Elaborado pelo autor.<p>
+                                <p class="note">Nota: Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:<p>
+                            </div>
+                            </center>
+                        </div>
+
+                        <p>Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:</p>
+
+                    </div>
+                -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/vendor/jquery-3.1.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/WeightVectorsGenerator.js"></script>
+        <script src="js/showdown.min.js"></script>
+        <script src="js/uecetex-extension.js" />
+
+        <script src="js/generators/Chapters.js"></script>
+        <script src="js/generators/Sections.js"></script>
+        <script src="js/generators/SubSections.js"></script>
+        <script src="js/generators/SubSubSections.js"></script>
+        <script src="js/generators/SubSubSubSections.js"></script>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

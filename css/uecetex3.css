@@ -1,0 +1,186 @@
+
+
+:root {
+  --font-size: 12pt;
+}
+
+body {
+    counter-reset: h1;
+}
+
+#output {
+    font-size: var(--font-size);
+    font-family: "Times New Roman", Georgia, Serif;
+    border: 1px solid black;
+    line-height: 1.5;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#output h1, h2, h3, h4, h5{
+    font-size: var(--font-size);
+    margin-top: 0px;
+    margin-bottom: 18pt;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#output h2, h3, h4, h5{
+    margin-top: 18pt;
+}
+
+#output h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    counter-reset: h2;
+    page-break-before: always;
+}
+
+#output h2{
+    text-transform: uppercase;
+    counter-reset: h3;
+}
+
+#output h3{
+    font-weight: bold;
+    counter-reset: h4;
+}
+
+#output h4{
+    counter-reset: h5;
+}
+
+#output h5{
+    font-style: italic;
+    counter-reset: h6;
+}
+
+h1:before {counter-increment: h1; content: counter(h1) " "}
+h2:before {counter-increment: h2; content: counter(h1) "." counter(h2) " "}
+h3:before {counter-increment: h3; content: counter(h1) "." counter(h2) "." counter(h3) " "}
+h4:before {counter-increment: h4; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "}
+h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "}
+h6:before {counter-increment: h6; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " counter(h6) " "}
+
+h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+    content: "";
+    counter-increment: none
+}
+
+#output p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-indent: 2cm;
+    text-align: justify;
+    -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+}
+
+#output ul{
+    padding-left: 0.4cm;
+    margin-left: 2cm;
+    list-style-type: lower-latin;
+    counter-reset: list;
+}
+
+#output ul li{
+    list-style: none;
+}
+
+#output ul li:before{
+    content: counter(list, lower-alpha) ") ";
+    counter-increment: list;
+    margin-left: -1.0em;
+}
+
+#output ul:nth-child(1) {
+    padding-left: 0cm;
+    margin-left: 0.5cm;
+    list-style-type: lower-latin;
+}
+
+#output ul:nth-child(1) li{
+    list-style-type: none;
+    counter-reset: list;
+}
+
+#output ul:nth-child(1) li:before{
+    content: "– \00a0";
+    margin-left: -1.1em;
+}
+
+#output .citacao-longa{
+    margin-top: 18pt;
+    margin-bottom: 18pt;
+    font-size: 10pt;
+    margin-left: 4cm;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#output div.floating{
+    margin-top: 18pt;
+    margin-bottom: 18pt;
+}
+
+#output div.floating p.caption{
+    text-indent: 0cm;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4pt;
+}
+
+#output div.floating p.font, #output div.floating p.note{
+    margin-top: 4pt;
+    font-size: 10pt;
+    text-indent: 0cm;
+    text-align: left;
+}
+
+#output div.figure, #output div.table{
+    width: fit-content;
+    height: fit-content;
+}
+
+#output table tr{
+    line-height: 30px;
+    border-top: 1px solid black !important;
+}
+
+#output table{
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+}
+
+div.floating {
+  page-break-inside: avoid;
+}
+
+
+
+
+page {
+    padding: 3cm 2cm 2cm 3cm;
+    overflow-y: auto;
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+}
