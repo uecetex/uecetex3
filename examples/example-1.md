@@ -6,6 +6,12 @@ As Redes Definidas por Software (SDN) fornecem uma abordagem para solucionar ess
 
 As redes de transporte ópticas já possuem um controle centralizado, porém muitas tarefas de reconfiguração da rede ainda requerem operação manual. Com a evolução das redes ópticas, de um modelo estático para um mais configurável e dinâmico, vários desafios são apresentados para o plano de controle, como equalização óptica, roteamento e alocação de espectro, virtualização de serviços e outros. Os possíveis benefícios de SDN para OTN incluem simplificação da rede, virtualização das capacidades da rede, automação das operações da rede através de interfaces programáveis e implantação de novos serviços. O paradigma atual das redes de transporte já emprega um controle centralizado, auxiliado por funcionalidades distribuídas do GMPLS, como descobrimento da rede, atualização do estado da rede e outros. Assim, o desenvolvimento das Redes Ópticas Definidas por Software (SDON) deve considerar estratégias de migração e a melhor localização para implementação dessas funções (SIQUEIRA et al., 17 2013).
 
+## OBJETIVOS
+
+### Objetivo Geral
+
+Propor uma arquitetura que permita definir os componentes indispensáveis para atender as necessidades de virtualização e fatiamento de redes OTNs e um framework que será proposto a partir da arquitetura, como prova de conceito para criação de diversas fatias de redes virtuais.
+
 ### Objetivos Específicos
 
 - estudar redes ópticas para entender quais informações podem ser utilizadas na virtualização;
@@ -26,3 +32,41 @@ O crescimento da demanda por banda, a necessidade da transmissão de dados a vel
 !figure[Hierarquia OTN dividida em camadas][images/example-1-figure-1.png][(RAMASWAMI et al., 2010).]
 
 A camada OCh e suas subcamadas são responsáveis pela criação e gerenciamento do quadro OTN, também fornece um caminho óptico para transportar o sinal cliente pela rede OTN, realizando conversão do sinal elétrico para óptico entre duas terminações ópticas. Na camada OPU são realizadas adaptações necessárias para o transporte do sinal cliente pela rede OTN. A camada ODU provê as funcionalidades de multiplexação TDM, proteção, supervisão fim-a-fim do caminho, TCM (Tandem Conection Monitoring), entre outras funcionalidades de monitoração da qualidade do sinal. A camada OMS é responsável por multiplexar/demultiplexar diversos comprimentos de onda, cada um transportando um canal óptico, em uma fibra. A camada OTS fornece um caminho óptico ponto-a-ponto entre dois elementos ópticos.
+
+## testem
+
+<div class="floating">
+    <p class="caption">Figura 2 - Produção anual das dissertações de mestrado e teses de doutorado entre os anos de 1990 e 2008</p>
+    <center>
+    <div class="table" style="width: 400px">
+        <table width="400px" >
+            <thead>
+                <tr>
+                    <th>Well #</th>
+                    <th>Velocity: BD tests</th>
+                    <th>Hydraulic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>b2</td>
+                    <td>0.054 ft/d</td>
+                    <td>1.1 x 10-2 ft/d</td>
+                </tr>
+                <tr>
+                    <td>B3</td>
+                    <td>0.32 ft/d</td>
+                    <td>0.07 ft/d</td>
+                </tr>
+                <tr>
+                    <td>B4</td>
+                    <td>0.06 ft/d</td>
+                    <td>1.2 x 10-2 ft/d</td>
+                </tr>
+            <tbody>
+        </table>
+        <p class="font">Fonte: Elaborado pelo autor.<p>
+        <p class="note">Nota: Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:<p>
+    </div>
+    </center>
+</div>
