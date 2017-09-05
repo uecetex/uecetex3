@@ -1,4 +1,8 @@
-var converter = new showdown.Converter({ extensions: ['uecetex'] });
+var converter = new showdown.Converter({
+    extensions: ['showdown-uecetexjs-figure']
+});
+
+converter.setOption('tables', 'true');
 
 function checkOverflow(el)
 {
@@ -50,20 +54,10 @@ function printDiv(divName) {
 
     newWin.document.close();
 }
-//
-//
-// function processGenerator(line){
-//
-//     for(var i=0;i<generators.length;i++){
-//         if(generators[i].is(line)){
-//             return generators[i].toString(line);
-//         }
-//     }
-//
-//     return "";
-// }
 
 function view(){
+
+    console.log("Viewing");
 
     var content = $("#input").val();
 
@@ -86,20 +80,33 @@ function view(){
     $("#output").html(converter.makeHtml(content));
 }
 
+function loadExample(id){
+    $.get("examples/example-"+id+".md", function(content){
+        $("#input").val(content);
+        view();
+    });
+}
+
 $(function(){
 
-    $(".floating .figure .font").width($(".font").parent().find("img").width());
-    $(".floating .figure .note").width($(".note").parent().find("img").width());
-    $(".floating .table .font").width($(".font").parent().find("table").width());
-    $(".floating .table .note").width($(".note").parent().find("table").width());
-
-    converter.setOption('tables', 'true');
-
+    //$(".floating .figure .font").width($(".font").parent().find("img").width());
+    //$(".floating .figure .note").width($(".note").parent().find("img").width());
+    //$(".floating .table .font").width($(".font").parent().find("table").width());
+    //$(".floating .table .note").width($(".note").parent().find("table").width());
 
     $("#inputs").keypress(function(){
         print();
     });
+
+    loadExample(1);
+
+
     $("#print").click(function(){
         view();
     });
+
+    $(".examples").click(function(){
+        loadExample($(this).data("id"));
+        return false;
+    })
 })

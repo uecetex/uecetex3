@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/uecetex3.css">
 
-        <title>UeceTeX</title>
+        <title>uecetexjs</title>
     </head>
     <body>
 
@@ -49,11 +49,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Weight Vectors Generator</a>
+                    <a class="navbar-brand" href="#">uecetexjs</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
         			<ul class="nav navbar-nav">
-        				<li><a href="https://github.com/thiagodnf/weight-vectors-generator" target="_blank">Source Code</a></li>
+        				<li><a href="https://github.com/uecetex/uecetex3" target="_blank">Source Code</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="examples" data-id="1">Example 1</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -95,27 +101,6 @@
             <p class="indent">APOS o levantamento do material bibliográfico, os procedimentos de coleta e TRATAMENTO dos dados foram os seguintes:</p>
             <p class="indent">APOS o levantamento do material bibliográfico, os procedimentos de coleta e TRATAMENTO dos dados foram os seguintes:</p>
             <p>Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste</p>
-
-            <ul class="alinea">
-                <li>Leitura exploratória, com objetivo de verificar se a obra consultada interessa à pesquisa;</li>
-                <li>leitura analítica, com o intuito de ordenar e sumariar as informações contidas nas fontes – leitura de natureza crítica. Este tipo de leitura passou pelos seguintes momentos:
-                <ul class="subalinea">
-                    <li>leitura integral do texto para se ter uma visão do todo;</li>
-                    <li>identificação das ideias chaves (análise temática);</li>
-                    <li>hierarquização das ideias e sua organização, seguindo uma ordem de importância para a pesquisa.</li>
-                </ul>
-                </li>
-                <li>leitura interpretativa, que foi a última etapa do processo e teve por objetivo relacionar o que o autor afirmou com o problema de pesquisa.</li>
-            </ul>
-
-            <h1 id="chapter2">EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA</h1>
-
-            <h2>seções secundárias (cx. alta sem negrito) </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
-
-            <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
-            <h3>Seções terciárias (cx. alta e baixa com negrito) </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mi ultrices, pellentesque nisl eget, auctor leo. Morbi bibendum ac leo a ullamcorper. Sed nec orci augue. In eu augue tellus. Ut sagittis felis nec nisl ullamcorper, vitae consequat risus suscipit. Praesent vel hendrerit dui. Aenean elementum vulputate sapien et mollis. Etiam maximus ipsum vel fermentum suscipit. Mauris vitae elementum est. Duis ultricies semper pharetra. </p>
         -->
 
         </div>
@@ -328,19 +313,13 @@ markdown
             </div>
         </div>
 
-
-        <script src="js/vendor/jquery-3.1.1.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/WeightVectorsGenerator.js"></script>
-        <script src="js/showdown.min.js"></script>
-        <script src="js/uecetex-extension.js" />
-
-        <script src="js/generators/Chapters.js"></script>
-        <script src="js/generators/Sections.js"></script>
-        <script src="js/generators/SubSections.js"></script>
-        <script src="js/generators/SubSubSections.js"></script>
-        <script src="js/generators/SubSubSubSections.js"></script>
-
-        <script src="js/script.js"></script>
+        <!-- Vendors -->
+        <script type="text/javascript" charset="UTF-8" src="js/vendor/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="js/vendor/showdown.min.js"></script>
+        <!-- Extensions-->
+        <script type="text/javascript" charset="UTF-8" src="js/showdown-extensions/showdown-uecetexjs-figure.js"></script>
+        <!-- Main Script -->
+        <script type="text/javascript" charset="UTF-8" src="js/script.js"></script>
     </body>
 </html>
