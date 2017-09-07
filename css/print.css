@@ -1,16 +1,14 @@
-body {
-    margin:0;
-    padding:0;
+@media print{
+    body {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @page {
     size: A4;
-    margin-top: 3cm;
-    margin-left: 3cm;
-    margin-right: 2cm;
-    margin-bottom: 2cm;
-}
+    margin: 0;
+    padding: 0;
 
-#output {
-    border: none !important;
+    padding: 3cm 2cm 2cm 3cm;
 }

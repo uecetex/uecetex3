@@ -1,16 +1,31 @@
-:root {
-  --font-size: 12pt;
-}
-
 body {
     counter-reset: h1;
 }
 
-#output {
-    font-size: var(--font-size);
+.page{
+    border: 1px solid black;
+
+    margin: 0;
+    padding: 0;
+
+    padding: 3cm 2cm 2cm 3cm;
+
+    width: 21cm;
+    height: 29.7cm;
+
+    margin-bottom: 1cm;
+
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+
+.content {
+    font-size: 12pt;
     font-family: "Times New Roman", Georgia, Serif;
     border: 1px solid black;
     line-height: 1.5;
+    page-break-after:always;
+
     text-align: justify;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -18,160 +33,142 @@ body {
     hyphens: auto;
 }
 
-#output h1, h2, h3, h4, h5{
-    font-size: var(--font-size);
+.content h1, .content h2, .content h3, .content h4, .content h5{
+    font-size: 12pt;
     margin-top: 0px;
     margin-bottom: 18pt;
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 
-#output h2, h3, h4, h5{
+.content h2, .content h3, .content h4, .content h5{
     margin-top: 18pt;
 }
 
-#output h1{
+/* Se o elemento eh o primeiro da página, entao ele nao deve ter margin top*/
+.content > h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child{
+    margin-top: 0px;
+}
+
+.content h1{
     text-transform: uppercase;
     font-weight: bold;
     counter-reset: h2;
     page-break-before: always;
 }
 
-#output h2{
+.content h2{
     text-transform: uppercase;
     counter-reset: h3;
 }
 
-#output h3{
+.content h3{
     font-weight: bold;
     counter-reset: h4;
 }
 
-#output h4{
+.content h4{
     counter-reset: h5;
 }
 
-#output h5{
+.content h5{
     font-style: italic;
     counter-reset: h6;
 }
 
-h1:before {counter-increment: h1; content: counter(h1) " "}
-h2:before {counter-increment: h2; content: counter(h1) "." counter(h2) " "}
-h3:before {counter-increment: h3; content: counter(h1) "." counter(h2) "." counter(h3) " "}
-h4:before {counter-increment: h4; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "}
-h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "}
-h6:before {counter-increment: h6; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " counter(h6) " "}
+.content h1:before {counter-increment: h1; content: counter(h1) " "}
+.content h2:before {counter-increment: h2; content: counter(h1) "." counter(h2) " "}
+.content h3:before {counter-increment: h3; content: counter(h1) "." counter(h2) "." counter(h3) " "}
+.content h4:before {counter-increment: h4; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "}
+.content h5:before {counter-increment: h5; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "}
+.content h6:before {counter-increment: h6; content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". " counter(h6) " "}
 
-h1.nocount:before, h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+.content h1.nocount:before, .content h2.nocount:before, .content h3.nocount:before, .content h4.nocount:before, .content h5.nocount:before, .content h6.nocount:before {
     content: "";
     counter-increment: none
 }
 
-#output p{
-    margin-top: 0px;
-    margin-bottom: 0px;
+.content p{
+    padding: 0;
+    margin: 0;
     text-indent: 2cm;
-    text-align: justify;
-    -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      hyphens: auto;
 }
 
-#output ul{
+/** Alienas e Subalineas */
+
+.content ul{
     padding-left: 0.4cm;
     margin-left: 2cm;
     list-style-type: lower-latin;
     counter-reset: list;
 }
 
-#output ul li{
+.content ul li{
     list-style: none;
 }
 
-#output ul li:before{
+.content ul li:before{
     content: counter(list, lower-alpha) ") ";
     counter-increment: list;
     margin-left: -1.0em;
 }
 
-#output ul:nth-child(1) {
+.content ul:nth-child(1) {
     padding-left: 0cm;
     margin-left: 0.5cm;
     list-style-type: lower-latin;
 }
 
-#output ul:nth-child(1) li{
+.content ul:nth-child(1) li{
     list-style-type: none;
     counter-reset: list;
 }
 
-#output ul:nth-child(1) li:before{
+.content ul:nth-child(1) li:before{
     content: "– \00a0";
     margin-left: -1.1em;
 }
 
-#output .citacao-longa{
+.content .citacao-longa{
     margin-top: 18pt;
     margin-bottom: 18pt;
     font-size: 10pt;
     margin-left: 4cm;
 }
 
-#output div.floating{
+.content div.floating{
     margin-top: 18pt;
     margin-bottom: 18pt;
     word-wrap: break-word;
 }
 
-#output div.floating p.caption{
+.content div.floating p.caption{
     text-indent: 0cm;
     text-align: center;
     font-weight: bold;
     margin-bottom: 4pt;
 }
 
-#output div.floating p.font, #output div.floating p.note{
+.content div.floating p.font, .content div.floating p.note{
     margin-top: 4pt;
     font-size: 10pt;
     text-indent: 0cm;
     text-align: left;
 }
 
-#output div.figure, #output div.table{
+.content div.figure, .content div.table{
     width: fit-content;
     height: fit-content;
 }
 
-#output table tr{
+.content table tr{
     line-height: 30px;
     border-top: 1px solid black !important;
 }
 
-#output table{
+.content table{
     vertical-align: middle;
     border-bottom: 1px solid black;
 }
 
-div.floating {
+.content div.floating {
   page-break-inside: avoid;
-}
-
-
-
-
-page{
-    padding: 3cm 2cm 2cm 3cm;
-    /*overflow-y: auto;*/
-    background: white;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 3.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-    /*width: 21cm;
-    height: 29.7cm;*/
 }

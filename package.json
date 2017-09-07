@@ -1,7 +1,7 @@
 {
-	"name": "uecetex3",
+	"name": "uecetexjs",
 	"version": "1.0.0",
-	"description": "uecetex3",
+	"description": "uecetexjs",
 	"main": "app.js",
 	"scripts": {
 		"start": "node server.js"
@@ -14,7 +14,7 @@
 	],
 	"author": "Thiago Ferreira",
 	"license": "MIT",
-	"homepage": "https://github.com/uecetex/uecetex3",
+	"homepage": "https://github.com/uecetex/uecetexjs",
 	"dependencies": {
 		"serve-static": "",
 		"connect": "",

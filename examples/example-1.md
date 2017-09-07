@@ -35,6 +35,8 @@ A camada OCh e suas subcamadas são responsáveis pela criação e gerenciamento
 
 ## testem
 
+Propor uma arquitetura que permita definir os componentes indispensáveis para atender as necessidades de virtualização e fatiamento de redes OTNs e um framework que será proposto a partir da arquitetura, como prova de conceito para criação de diversas fatias de redes virtuais.
+
 <div class="floating">
     <p class="caption">Figura 2 - Produção anual das dissertações de mestrado e teses de doutorado entre os anos de 1990 e 2008</p>
     <center>
@@ -69,4 +71,27 @@ A camada OCh e suas subcamadas são responsáveis pela criação e gerenciamento
         <p class="note">Nota: Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:<p>
     </div>
     </center>
+</div>
+
+
+# EDUCAÇÃO CONTEMPORÂNEA NA SOCIEDADE BRASILEIRA
+
+## CONTEXTUALIZANDO A EDUCAÇÃO
+
+Vários são os exemplos de contextualização da educação, de escolas que buscam na sua realidade idealização de projetos, que englobam aspectos sociais vividos por seus alunos (GRISPINO, 2005).
+
+### Educação de jovens e adultos
+
+A educação de jovens e adultos (EJA) é a modalidade de ensino nas etapas dos ensinos fundamental e médio da rede escolar pública brasileira e adotada por algumas redes particulares que recebe os jovens e adultos que não completaram os anos da educação básica em idade apropriada por qualquer motivo.
+
+#### A visão do educador de jovens e adultos
+
+A profissionalização do educador de EJA tem se tornado cada vez mais nuclear, tanto nas práticas educativas quanto nos fóruns de debate. Com base na ação do voluntariado, a primeira Campanha Nacional de Educação de Adultos no Brasil, lançada em 1947, passou a ser sistematicamente criticada por não preparar adequadamente professores para trabalhar com essa população (SOARES, 2008).
+
+##### A prática educativa na EJA
+
+Hoje, como ontem, as posições de Freire (1996, p. 59) com respeito à busca de novas práticas educativas ganham força e nos levam a refletir:
+
+<div class="citacao-longa">
+A aquisição do sistema escrito é um processo histórico, tanto a nível ontogenético, como a nível filogenético. O sistema escrito é produzido historicamente pela humanidade e utilizado de acordo com interesses políticos de classe. O sistema escrito não é um valor neutro
 </div>

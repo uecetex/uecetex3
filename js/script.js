@@ -6,7 +6,11 @@ converter.setOption('tables', 'true');
 
 function check(el){
 
-    if (el[0].offsetHeight < el[0].scrollHeight || el[0].offsetWidth < el[0].scrollWidth) {
+    console.log(el[0].offsetHeight);
+    console.log(el[0].scrollHeight);
+    console.log(el[0].offsetHeight < el[0].scrollHeight)
+
+    if (el[0].offsetHeight < el[0].scrollHeight) {
         return true;
     } else {
         return false;
@@ -15,25 +19,21 @@ function check(el){
 
 function checkOverflow(el)
 {
-
-   var curOverflow = el[0].style.overflow;
+   var curOverflow = el.style.overflow;
 
    if ( !curOverflow || curOverflow === "visible" )
-      el[0].style.overflow = "hidden";
+      el.style.overflow = "hidden";
 
-   var isOverflowing = el[0].clientWidth < el[0].scrollWidth
-      || el[0].clientHeight < el[0].scrollHeight;
+   var isOverflowing = el.clientWidth < el.scrollWidth
+      || el.clientHeight < el.scrollHeight;
 
-   el[0].style.overflow = curOverflow;
+   el.style.overflow = curOverflow;
 
    return isOverflowing;
 }
 
 function printDiv(divName) {
 
-    console.log(checkOverflow(document.getElementById("teset")));
-
-    return;
     var divToPrint=document.getElementById('output');
 
     var newWin = window.open('','Print-Window');
@@ -56,8 +56,11 @@ function printDiv(divName) {
     content += "<div id='output'>";
     content += divToPrint.innerHTML;
     content += "</div>";
-    content += "<script src='js/vendor/jquery-3.1.1.min.js'></script>";
-    content += "<script src='js/script.js'></script>";
+    content += '<script type="text/javascript" charset="UTF-8" src="js/vendor/jquery-3.1.1.min.js"></script>';
+    content += '<script type="text/javascript" charset="UTF-8" src="js/vendor/bootstrap.min.js"></script>';
+    content += '<script type="text/javascript" charset="UTF-8" src="js/vendor/showdown.min.js"></script>';
+    content += '<script type="text/javascript" charset="UTF-8" src="js/showdown-extensions/showdown-uecetexjs-figure.js"></script>';
+//    content += '<script type="text/javascript" charset="UTF-8" src="js/script.js"></script>';
     content += "</body></html>";
 
     newWin.document.write(content);
@@ -65,27 +68,24 @@ function printDiv(divName) {
     newWin.document.close();
 }
 
+function overflow($content, maxHeight){
+
+    var top = $content.offset().top;
+    var height = $content.height();
+
+    if (top + height > maxHeight) {
+        return true;
+    }
+
+    return false;
+}
+
+
 function view(){
 
     console.log("Viewing");
 
     var content = $("#input").val();
-
-    var lines = content.split("\n");
-
-    var pages = [];
-
-    var html = "";
-
-    $.each(lines, function(index, line){
-        line = line.trim();
-
-        if(line.startsWith("\\")){
-            html += processGenerator(line);
-        }else{
-            html += "<p>"+line+"</p>";
-        }
-    });
 
     var html = converter.makeHtml(content);
     var nodes = $.parseHTML(html);
@@ -107,56 +107,57 @@ function view(){
     headers.push({elements: elements});
     headers.shift();
 
-
     var pages = [];
-
-
 
     $.each(headers, function(index, header){
 
-        var tmp;
+        var content = $('<div class="content"></div>');
 
         $.each(header.elements, function(index, node){
 
-            if(!tmp){
-                tmp = $('<page></page>');
-                //tmp.css('overflowY', 'auto');
-                tmp.width("210mm");
-                tmp.height("297mm");
-                tmp.css("padding-top", "3cm");
-                tmp.css("padding-bottom", "2cm");
-                tmp.css("display","block");
-                tmp.css("margin","0 auto");
-            }
+            if(!node.tagName) return;
 
-            tmp.append(node);
+            if(!content) content = $('<div class="content"></div>');
 
-            $("#output").html(tmp);
+            content.append(node);
 
-            if(check(tmp)){
-                tmp.last().remove();
-                pages.push(tmp);
-                tmp = null;
+            $("#output").html($('<div class="page"></div>').append(content));
+
+            var $elem = $(content),
+                top = $elem.offset().top,
+                height = $elem.height();
+
+                console.log($(".page").height());
+                console.log(node.tagName+": "+(top + height))
+
+                if (top + height > $(".page").height()) {
+                    console.log("oi")
+                }
+
+            if(overflow($(content),$(".page").height())){
+
+                content.children().last().remove();
+
+                if(node.tagName == 'P'){
+                    console.log(node);
+                    console.log("quebrou")
+                }
+
+                pages.push($('<div class="page"></div>').append(content));
+                content = null
             }
         });
 
-        if(tmp != null){
-            pages.push(tmp);
+        if(content != null){
+            pages.push($('<div class="page"></div>').append(content));
         }
-
-
     });
 
-
-
-    var a = $('<div></div>');
+    var a = $('#output');
 
     $.each(pages, function(index, page){
         a.append(page) ;
     });
-
-
-    $("#output").html(a);
 }
 
 function loadExample(id){
@@ -168,13 +169,13 @@ function loadExample(id){
 
 $(function(){
 
-    $("#inputs").keypress(function(){
-        print();
-    });
-
-    loadExample(1);
+    loadExample(2);
 
     $("#print").click(function(){
+        printDiv();
+    });
+
+    $("#view").click(function(){
         view();
     });
 
