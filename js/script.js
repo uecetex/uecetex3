@@ -113,6 +113,8 @@ function view(){
 
         var content = $('<div class="content"></div>');
 
+        var position = 0;
+
         $.each(header.elements, function(index, node){
 
             if(!node.tagName) return;
@@ -123,18 +125,7 @@ function view(){
 
             $("#output").html($('<div class="page"></div>').append(content));
 
-            var $elem = $(content),
-                top = $elem.offset().top,
-                height = $elem.height();
-
-                console.log($(".page").height());
-                console.log(node.tagName+": "+(top + height))
-
-                if (top + height > $(".page").height()) {
-                    console.log("oi")
-                }
-
-            if(overflow($(content),$(".page").height())){
+            if(overflow($(content), $(".page").height())){
 
                 content.children().last().remove();
 
@@ -153,10 +144,12 @@ function view(){
         }
     });
 
+    $('#output').html();
+
     var a = $('#output');
 
     $.each(pages, function(index, page){
-        a.append(page) ;
+      a.append(page) ;
     });
 }
 
