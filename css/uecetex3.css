@@ -172,3 +172,15 @@ body {
 .content div.floating {
   page-break-inside: avoid;
 }
+
+@page {margin: 10%;
+       counter-increment: page;
+       counter-reset: footnote;
+       @outside {text-align: center;
+                 vertical-align: center;
+                 font-family: Helvetica, Swiss, Arial, sans-serif;
+                 font-weight: bold;
+                 font-size: 2em;
+                 content: '@';
+       }
+}

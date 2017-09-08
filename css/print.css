@@ -11,4 +11,16 @@
     padding: 0;
 
     padding: 3cm 2cm 2cm 3cm;
+
+    counter-increment: page;
+
+}
+
+@page:first {
+    counter-reset: page 1;
+}
+
+.pageNumber{
+    content: counter(page);
+    color: red;
 }

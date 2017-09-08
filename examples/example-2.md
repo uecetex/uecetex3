@@ -4,6 +4,8 @@ O objetivo deste capítulo é apresentar uma visão geral de redes OTN, citando 
 
 ## REDES ÓPTICAS DE TRANSPORTE
 
+<span class="pageNumber">1</span>
+
 O crescimento da demanda por banda, a necessidade da transmissão de dados a velocidades cada vez maiores e aplicações com grande volume de informações sensíveis a atrasos, foram alguns dos motivos que impulsionaram a pesquisa e desenvolvimento de uma rede mais veloz. As primeiras redes de transporte eram analógicas e utilizavam cabos coaxiais para transmissão.
 
 !figure[Hierarquia OTN dividida em camadas][images/example-1-figure-1.png][(RAMASWAMI et al., 2010).]
@@ -15,3 +17,5 @@ A camada OCh e suas subcamadas são responsáveis pela criação e gerenciamento
 Propor uma arquitetura que permita definir os componentes indispensáveis para atender as necessidades de virtualização e fatiamento de redes OTNs e um framework que será proposto a partir da arquitetura, como prova de conceito para criação de diversas fatias de redes virtuais.
 
 Propor uma arquitetura que permita definir os componentes indispensáveis para atender as necessidades de virtualização e fatiamento de redes OTNs e um framework que será proposto a partir da arquitetura, como prova de conceito para criação de diversas fatias de redes virtuais.
+
+<span class="pageNumber">45</span>
